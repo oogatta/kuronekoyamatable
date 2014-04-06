@@ -1,7 +1,7 @@
 {
   "manifest_version" : 2,
   "name"             : "Kuronekoyamatable",
-  "version"          : "0.0.1",
+  "version"          : "0.0.2",
   "description"      : "empower toi.kuronekoyamato.co.jp",
   "background"       : {
     "persistent" : false,
@@ -14,7 +14,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://toi.kuronekoyamato.co.jp/cgi-bin/tneko*"],
+      "matches": [
+        "http://toi.kuronekoyamato.co.jp/cgi-bin/tneko*",
+        "http://search.kuronekoyamato.co.jp/google/tnekog*"
+      ],
       "js":      ["content/main.js"],
       "run_at":  "document_end"
     }
@@ -25,6 +28,7 @@
     "notifications",
     "storage",
     "http://toi.kuronekoyamato.co.jp/*",
+    "http://search.kuronekoyamato.co.jp/*",
     "https://api.pushover.net/*"
   ],
   "web_accessible_resources": [

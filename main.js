@@ -27,7 +27,7 @@
               xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4) {
                 }
-              }
+              };
               xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded;charset=UTF-8');
               xhr.send('token=' + encodeURIComponent(values.apiToken) + '&user=' + encodeURIComponent(values.userKey) + '&message=' + encodeURIComponent(packageInfo + '\n' + message));
             }

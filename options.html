@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="ja">
+  <meta charset="UTF-8">
+  <title>kuronokoyamatable の設定</title>
+  <link rel="stylesheet" href="exlib/pure-min.css">
+  <link rel="stylesheet" href="options.css">
+
+  <script src="exlib/jquery-2.1.0.min.js"></script>
+  <script src="exlib/vex.combined.min.js"></script>
+  <link rel="stylesheet" href="exlib/vex.css">
+  <link rel="stylesheet" href="exlib/vex-theme-default.css">
+</head>
+<body>
+  <main>
+    <h1><img src="img/RoundIcons-Free-Set-50-48.png"> kuronekoyamatable の設定</h1>
+    <form class="pure-form pure-form-stacked">
+      <fieldset>
+        <legend>Pushover</legend>
+
+        <div class="pure-g">
+          <div class="pure-u-1-1">
+            <label for="api-token">アプリケーションの API Token</label>
+            <input id="api-token" type="text" class="pure-input-1">
+          </div>
+
+          <div class="pure-u-1-1">
+            <label for="user-key">ユーザーキー</label>
+            <input id="user-key" type="text" class="pure-input-1">
+          </div>
+        </div>
+
+        <button type="submit" class="pure-input-1 pure-button pure-button-primary">Submit</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <script src="options.js"></script>
+</body>
+</html>

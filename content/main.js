@@ -1,7 +1,7 @@
 /*global chrome:false*/
 (function () {
   var reloadInterval = 3 * 60 * 1000;
-  var previousStatus = null;
+  var previousStatus = sessionStorage.getItem('previousStatus');
   var trs = document.querySelectorAll('.saisin tr');
 
   var check = function () {
@@ -19,17 +19,13 @@
             package:        previousSiblingTr.querySelector('.bold').innerHTML
           };
           chrome.runtime.sendMessage(message);
+          sessionStorage.setItem('previousStatus', status);
         }
       }
       return currentTr;
     }, null);
   };
 
-  chrome.runtime.sendMessage({action:'get_previous_status'}, function (response) {
-    previousStatus = response.previousStatus;
-
-    check();
-
-    setInterval(function () {location.reload();}, reloadInterval);
-  });
+  check();
+  setInterval(function () {location.reload();}, reloadInterval);
 })();

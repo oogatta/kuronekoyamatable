@@ -1,0 +1,26 @@
+{
+  "manifest_version" : 2,
+  "name"             : "Kuronekoyamatable",
+  "version"          : "0.0.1",
+  "description"      : "empower toi.kuronekoyamato.co.jp",
+  "background"       : {
+    "persistent" : false,
+    "scripts"    : ["main.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://toi.kuronekoyamato.co.jp/cgi-bin/tneko*"],
+      "js":      ["content/main.js"],
+      "run_at":  "document_end"
+    }
+  ],
+  "content_security_policy": "default-src 'none'; style-src 'self'; script-src 'self';",
+  "permissions"      : [
+    "tabs",
+    "notifications",
+    "http://toi.kuronekoyamato.co.jp/*"
+  ],
+  "web_accessible_resources": [
+    "img/RoundIcons-Free-Set-50.png"
+  ]
+}

@@ -7,6 +7,11 @@
     "persistent" : false,
     "scripts"    : ["main.js"]
   },
+  "icons": {
+    "16":  "img/RoundIcons-Free-Set-50-16.png",
+    "48":  "img/RoundIcons-Free-Set-50-48.png",
+    "128": "img/RoundIcons-Free-Set-50-128.png"
+  },
   "content_scripts": [
     {
       "matches": ["http://toi.kuronekoyamato.co.jp/cgi-bin/tneko*"],
@@ -21,6 +26,6 @@
     "http://toi.kuronekoyamato.co.jp/*"
   ],
   "web_accessible_resources": [
-    "img/RoundIcons-Free-Set-50.png"
+    "img/RoundIcons-Free-Set-50-48.png"
   ]
 }

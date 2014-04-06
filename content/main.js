@@ -65,9 +65,9 @@
 
   setInterval(function () {location.reload();}, reloadInterval);
 
-//  setInterval(function () {
-//    previousStatus = sessionStorage.getItem('previousStatus');
-//    message = __checker();
-//    sender();
-//  }, 10000);
+  window.debugRun = function () {
+    previousStatus = sessionStorage.getItem('previousStatus');
+    message = __checker();
+    sender();
+  }
 })();

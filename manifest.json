@@ -30,5 +30,5 @@
   "web_accessible_resources": [
     "img/RoundIcons-Free-Set-50-48.png"
   ],
-  "options_page": "options.html"
+  "options_page": "options/main.html"
 }

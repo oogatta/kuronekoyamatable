@@ -16,7 +16,7 @@
             action:         'notify',
             previousStatus: previousStatus,
             status:         status,
-            package:        previousSiblingTr.querySelector('.bold').innerHTML
+            packageInfo:    previousSiblingTr.querySelector('.bold').innerHTML
           };
           chrome.runtime.sendMessage(message);
           sessionStorage.setItem('previousStatus', status);

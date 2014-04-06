@@ -19,12 +19,13 @@
       "run_at":  "document_end"
     }
   ],
-  "content_security_policy": "default-src 'none'; style-src 'self'; script-src 'self';",
+  "content_security_policy": "default-src 'none'; style-src 'self'; script-src 'self'; connect-src https://api.pushover.net",
   "permissions"      : [
     "tabs",
     "notifications",
     "storage",
-    "http://toi.kuronekoyamato.co.jp/*"
+    "http://toi.kuronekoyamato.co.jp/*",
+    "https://api.pushover.net/*"
   ],
   "web_accessible_resources": [
     "img/RoundIcons-Free-Set-50-48.png"
